@@ -1,0 +1,5 @@
+Analogi Sederhana
+
+useCallback : "Tidak Membuat Ulang function ulang jika datanya sama".
+React.memo : "Tidak Merender Ulang Komponen kalau props nya gak berubah".
+
