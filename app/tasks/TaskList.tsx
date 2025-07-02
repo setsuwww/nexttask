@@ -5,11 +5,6 @@ import TaskCard, { Task } from "./TaskCard"
 
 function TaskList({ tasks: initialTasks }: { tasks: Task[] }) {
   const [tasks, setTasks] = useState(initialTasks)
-  const [isEditing, setIsEditing] = useState(false)
-
-  const handleEdit = useCallback(() => {
-    setIsEditing(true)
-  }, [])
 
   const handleStatusUpdate = useCallback(async (id: number, status: "Success" | "Failed") => {
     try {
@@ -52,7 +47,7 @@ function TaskList({ tasks: initialTasks }: { tasks: Task[] }) {
             {...task}
             onSubmit={(status) => handleStatusUpdate(task.id, status)}
             onDelete={() => handleDelete(task.id)}
-            onEdit={() => handleEdit()}
+            onEdit={() => {}}
           />
         ))}
       </div>

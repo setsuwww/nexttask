@@ -1,11 +1,10 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useRouter } from "next/navigation"
 import { FileText, CheckCircle, Edit, Trash2 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { useFormattedDate } from "@/lib/useFormatedDate"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu"
 import EditTaskModal from "@/components/content/editTaskModal"
 
@@ -19,7 +18,7 @@ export type Task = {
   onDelete?: () => void
 }
 
-function TaskCard({ id, title, description, status, onSubmit, onEdit, onDelete }: Task) {
+function TaskCard({ id, title, description, status, onSubmit, onDelete }: Task) {
 
   const [currentStatus, setCurrentStatus] = useState(status)
   const [showEdit, setShowEdit] = useState(false)

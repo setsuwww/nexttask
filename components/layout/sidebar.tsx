@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import { LayoutDashboard, ListTodo, PlusCircle, Clock } from "lucide-react"
+import Image from "next/image"
 
 const navItems = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
@@ -20,7 +21,7 @@ function Sidebar() {
     <aside className="fixed top-0 left-0 z-40 hidden md:flex w-64 h-screen bg-white border-r shadow-sm flex-col justify-between">
       <div>
         <div className="flex items-center space-x-1 px-6 py-5 text-xl font-bold border-b">
-          <img src="/nextschool.png" alt="" className="size-6" />
+          <Image src="/nextschool.png" alt="" width={50} height={50} />
           <p>
             <span className="text-gray-950">Next</span>
             <span className="text-gray-600">Task</span>
